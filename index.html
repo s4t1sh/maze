@@ -5,6 +5,7 @@
   <title>Maze Game</title>
   <link rel="stylesheet" href="style.css">
   <script src="https://cdn.tailwindcss.com"></script>
+
 <body>
   <div id="gradient"></div>
   <div id="page">
@@ -34,16 +35,30 @@
     </div>
   </div>
 
-  <div style="position: absolute; flex-direction: column; align-items: center; gap: 5px; bottom: 10%; margin-left: auto; margin-right: auto; width: 100%;" class="flex lg:hidden">
-    <div>
-      <img id="up" src="./assets/play.png" alt="" style="transform: rotate(270deg); width: 100px;">
-    </div>
-    <div style="display: flex; gap: 5px;">
-      <img id="left" src="./assets/play.png" alt="" style="transform: rotate(180deg); width: 100px;">
-      <img id="down" src="./assets/play.png" alt="" style="transform: rotate(90deg); width: 100px;">
-      <img id="right" src="./assets/play.png" alt="" style="width: 100px;transform: rotate(0deg);">
+  <div style="position: absolute; bottom: 3%; margin-left: auto; margin-right: auto; width: 100%;">
+    <div class="flex lg:hidden flex-col justify-center items-center mt-4">
+      <div class="text-white">
+        <p class="text-5xl font-semibold">महतारी वंदन योजना के तहत</p>
+        <div class="flex gap-4 my-4 justify-center text-2xl">
+          <div class="bg-[#ba6201] px-4 py-2 rounded-lg">
+            ₹1000 प्रति माह
+          </div>
+          <div class="bg-[#ba6201] px-4 py-2 rounded-lg">
+            ₹12000 सालाना
+          </div>
+        </div>
+      </div>
+      <div>
+        <img id="up" src="./assets/play.png" alt="" style="transform: rotate(270deg); width: 100px;">
+      </div>
+      <div style="display: flex; gap: 5px;">
+        <img id="left" src="./assets/play.png" alt="" style="transform: rotate(180deg); width: 100px;">
+        <img id="down" src="./assets/play.png" alt="" style="transform: rotate(90deg); width: 100px;">
+        <img id="right" src="./assets/play.png" alt="" style="width: 100px;transform: rotate(0deg);">
+      </div>
     </div>
   </div>
+
 
   <script>
     // Function to simulate key press
@@ -53,19 +68,19 @@
     }
 
     // Add event listeners to images
-    document.getElementById('up').addEventListener('click', function() {
+    document.getElementById('up').addEventListener('click', function () {
       simulateKeyPress(38); // Up arrow key
     });
 
-    document.getElementById('left').addEventListener('click', function() {
+    document.getElementById('left').addEventListener('click', function () {
       simulateKeyPress(37); // Left arrow key
     });
 
-    document.getElementById('right').addEventListener('click', function() {
+    document.getElementById('right').addEventListener('click', function () {
       simulateKeyPress(39); // Right arrow key
     });
 
-    document.getElementById('down').addEventListener('click', function() {
+    document.getElementById('down').addEventListener('click', function () {
       simulateKeyPress(40); // Down arrow key
     });
   </script>
